@@ -40,24 +40,26 @@ public class Romain {
 	public void sEquiper(Equipement equipement) {
 		switch (nbEquipement) {
 		case 0: {
-			this.equipement[nbEquipement] = equipement;
-			nbEquipement++;
-			System.out.println("Le soldat " + nom + " s'équipe avec un " + equipement);
+			extracted(equipement);
 			break;
 		}
 		case 1: {
 			if (this.equipement[0] == equipement) {
 				System.out.println("Le soldat " + nom + " à déjà " + equipement);
 			}else {
-				this.equipement[nbEquipement] = equipement;
-				nbEquipement++;
-				System.out.println("Le soldat " + nom + " s'équipe avec un " + equipement);
+				extracted(equipement);
 			}
 			break;
 		}
 		default:
 			System.out.println("Le soldat " + nom + " est déjà bien protégé !");;
 		}
+	}
+
+	private void extracted(Equipement equipement) {
+		this.equipement[nbEquipement] = equipement;
+		nbEquipement++;
+		System.out.println("Le soldat " + nom + " s'équipe avec un " + equipement);
 	}
 
 	public static void main(String[] args) {
