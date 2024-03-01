@@ -7,6 +7,7 @@ public class Romain {
 	public Romain(String nom, int force) {
 		super();
 		this.nom = nom;
+		assert force > 0;
 		this.force = force;
 	}
 
@@ -23,11 +24,18 @@ public class Romain {
 	}
 
 	public void recevoirCoup(int forceCoup) {
+		assert force > 0;
+		int forcedebut = force;
 		force -= forceCoup;
 		if (force > 0) {
 			parler("Aie");
 		} else {
 			parler("J'abandonne...");
 		}
+		assert forcedebut > force;
+	}
+	
+	public static void main(String[] args) {
+		Romain minus = new Romain("Minus",6);
 	}
 }
