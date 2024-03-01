@@ -11,10 +11,7 @@ public class Scenario {
 		Druide panoramix = new Druide("Panoramix", 10, 5);
 		
 		panoramix.parler("Je vais aller préparer une potion.");
-		
-		while (panoramix.getForcePotion() != 6) {
-			panoramix.preparerPotion();
-		}
+		panoramix.preparerPotion();
 		panoramix.booster(obelix);
 		obelix.parler("Par Bélénos, ce n'est pas juste !");
 		panoramix.booster(asterix);
