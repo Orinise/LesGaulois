@@ -8,7 +8,7 @@ public class Druide {
 	private int effetPotionMin;
 	private int forcePotion = 1;
 
-	public Druide(String nom, int effetPotionMax, int effetPotionMin) {
+	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
 		super();
 		this.nom = nom;
 		this.effetPotionMax = effetPotionMax;
